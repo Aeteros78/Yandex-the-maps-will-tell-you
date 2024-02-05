@@ -1,3 +1,5 @@
+/* Общие стили */
+
 :root {
   --main-font: raleway;
   --accent-font: 'STIX Two Text';
@@ -32,6 +34,8 @@ figure {
   margin: 0;
 }
 
+/* Стили блока header */
+
 .heading {
   font-family: var(--accent-font, serif);
   font-weight: 600;
@@ -55,4 +59,57 @@ figure {
 .content__title {
   font-size: 30px;
   margin: 7% 0 2.5%;
+}
+
+/* Стили text-block */
+
+.content__text-block {
+  font-size: 18px;
+}
+
+.content__text-block .content__paragraph:not(:last-of-type) {
+  margin-block-end: 1.5em;
+}
+
+.content__text-block a {
+  color: inherit;
+}
+
+/* Стили цитаты */
+
+.content__blockquote {
+  inline-size: 75%;
+  margin: 0 auto 1.5em;
+  font-style: italic;
+  line-height: 2;
+}
+
+/* Стили списка */
+
+.content__list {
+  padding: 0 0 0 40px;
+  list-style: none;
+}
+
+.content__list li {
+  position: relative;
+}
+
+.content__list li:not(:last-of-type) {
+  margin-block-end: 10px;
+}
+
+.content__list li::before {
+  content: '';
+  position: absolute;
+  inline-size: 15px;
+  block-size: 15px;
+  margin-block-start: -7.5px;
+  background-image: 
+    url(../images/marker-light.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  inset-block-start: 50%;
+  inset-inline-start: -25px;
 }
