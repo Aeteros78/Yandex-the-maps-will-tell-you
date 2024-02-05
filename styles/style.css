@@ -113,3 +113,14 @@ figure {
   inset-block-start: 50%;
   inset-inline-start: -25px;
 }
+
+/* Стили первой буквы */
+
+.content__text-block_type_first-lettered .content__paragraph:first-of-type::first-letter {
+  display: inline-block;
+  margin-block-end: 1px;
+  padding: 0 4px;
+  font-weight: 700;
+  font-size: 30px;
+  background-color: var(--accent-color);
+}
