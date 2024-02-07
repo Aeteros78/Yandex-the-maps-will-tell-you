@@ -34,6 +34,18 @@ figure {
   margin: 0;
 }
 
+a:focus, button:focus {
+  outline: none;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
 
 
 /* Стили блока header */
@@ -96,6 +108,12 @@ figure {
 .header__theme-button_is-active::after {
   content: '';
   position: absolute;
+  z-index: -1;
+  inline-size: calc(100% + 8px);
+  block-size: 0.5ch;
+  background-color: var(--accent-color);
+  inset-block-end: 0.3ch;
+  inset-inline-start: -4px;
 }
 
 .content__title {
@@ -219,6 +237,6 @@ figure {
   inline-size: calc(100% + 8px);
   block-size: 0.5ch;
   background-color: var(--accent-color);
-  inset-block-start: -4px;
-  inset-inline-end: 0.3ch;
+  inset-block-end: 0.3ch;
+  inset-inline-start: -4px;
 } 
